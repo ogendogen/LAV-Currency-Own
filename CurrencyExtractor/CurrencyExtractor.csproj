@@ -54,19 +54,18 @@
     <Compile Include="Extractor.cs" />
     <Compile Include="JsonDumper.cs" />
     <Compile Include="Logger.cs" />
-    <Compile Include="Models\ApiLayerAPI.cs" />
-    <Compile Include="Models\ExChangeRatesAPI.cs" />
+    <Compile Include="Models\APIV4.cs" />
+    <Compile Include="Models\API.cs" />
     <Compile Include="Models\Quotes.cs" />
     <Compile Include="Models\Rates.cs" />
-    <Compile Include="Models\FinalOutput.cs" />
+    <Compile Include="Models\RatesV4.cs" />
+    <Compile Include="Models\MediatedSchema.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="final.json" />
-    <None Include="latest.json" />
-    <None Include="live.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

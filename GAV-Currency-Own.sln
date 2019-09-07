@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAV-Currency-Own", "GAV-Cur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExtractor", "CurrencyExtractor\CurrencyExtractor.csproj", "{19C3F6D3-AA3C-48BF-A698-D60F29AC46F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyTransformator", "CurrencyTransformator\CurrencyTransformator.csproj", "{4169D220-C130-494B-80FA-35907BB23849}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{19C3F6D3-AA3C-48BF-A698-D60F29AC46F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C3F6D3-AA3C-48BF-A698-D60F29AC46F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C3F6D3-AA3C-48BF-A698-D60F29AC46F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4169D220-C130-494B-80FA-35907BB23849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4169D220-C130-494B-80FA-35907BB23849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4169D220-C130-494B-80FA-35907BB23849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4169D220-C130-494B-80FA-35907BB23849}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

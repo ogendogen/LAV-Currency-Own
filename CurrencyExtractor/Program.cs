@@ -17,7 +17,7 @@ namespace CurrencyExtractor
             try
             {
                 Console.WriteLine("Starting extraction...");
-                FinalOutput finalOutput = Extractor.GetOutputFromFile("live.json", "latest.json");
+                MediatedSchema finalOutput = Extractor.GetOutputFromFile("live.json", "latest.json");
                 Console.WriteLine("FinalOutput object deserialized");
 
                 Console.WriteLine("Writing to file");

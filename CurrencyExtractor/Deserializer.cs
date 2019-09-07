@@ -10,11 +10,11 @@ namespace CurrencyExtractor
 {
     public static class Deserializer
     {
-        public static FinalOutput DeserializeToFinalOutput(string rawApiLayer, string rawExChangeRates)
+        public static MediatedSchema DeserializeToMediatedSchema(string rawApiJson, string rawAPIV4Json)
         {
-            FinalOutput finalOutput = new FinalOutput();
-            finalOutput.ApiLayerAPI = JsonConvert.DeserializeObject<ApiLayerAPI>(rawApiLayer);
-            finalOutput.ExChangesRatesAPI = JsonConvert.DeserializeObject<ExChangeRatesAPI>(rawExChangeRates);
+            MediatedSchema finalOutput = new MediatedSchema();
+            finalOutput.API = JsonConvert.DeserializeObject<API>(rawApiJson);
+            finalOutput.APIV4 = JsonConvert.DeserializeObject<APIV4>(rawAPIV4Json);
 
             return finalOutput;
         }

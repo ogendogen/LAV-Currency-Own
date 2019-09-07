@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CurrencyExtractor.Models
 {
-    public class ExChangeRatesAPI
+    public class APIV4
     {
-        public Rates rates { get; set; }
         public string @base { get; set; }
         public string date { get; set; }
+        public int time_last_updated { get; set; }
+        public RatesV4 rates { get; set; }
     }
 }

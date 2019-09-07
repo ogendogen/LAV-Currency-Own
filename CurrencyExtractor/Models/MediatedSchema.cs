@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CurrencyExtractor.Models
 {
-    public class FinalOutput
+    public class MediatedSchema
     {
-        public ApiLayerAPI ApiLayerAPI { get; set; }
-        public ExChangeRatesAPI ExChangesRatesAPI { get; set; }
+        public APIV4 APIV4 { get; set; }
+        public API API { get; set; }
     }
 }

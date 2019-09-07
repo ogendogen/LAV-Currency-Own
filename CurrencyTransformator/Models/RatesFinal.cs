@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CurrencyExtractor.Models
+﻿namespace CurrencyTransformator.Models
 {
-    public class Rates
+    public class RatesFinal
     {
         public double CAD { get; set; }
         public double HKD { get; set; }

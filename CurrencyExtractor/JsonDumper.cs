@@ -11,7 +11,7 @@ namespace CurrencyExtractor
 {
     public static class JsonDumper
     {
-        public static void DumpJsonToFile(string path, FinalOutput finalJson)
+        public static void DumpJsonToFile(string path, MediatedSchema finalJson)
         {
             try
             {
