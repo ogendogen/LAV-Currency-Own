@@ -1,4 +1,5 @@
 ﻿using CurrencyTransformator.Models;
+using CurrencyExtractor.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,11 @@ namespace CurrencyTransformator
         public static string SerializeFinalOutput(FinalOutput finalOutput)
         {
             return JsonConvert.SerializeObject(finalOutput, Formatting.Indented);
+        }
+
+        public static string SerializeMediatedSchema(CurrencyExtractor.Models.MediatedSchema mediatedSchema)
+        {
+            return JsonConvert.SerializeObject(mediatedSchema, Formatting.Indented);
         }
     }
 }

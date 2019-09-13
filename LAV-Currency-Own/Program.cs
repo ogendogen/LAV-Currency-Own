@@ -7,6 +7,7 @@ using CurrencyExtractor;
 using CurrencyExtractor.Models;
 using CurrencyTransformator;
 using CurrencyTransformator.Models;
+using System.IO;
 
 namespace GAV_Currency_Own
 {
@@ -20,15 +21,14 @@ namespace GAV_Currency_Own
             try
             {
                 Console.WriteLine("Starting extraction...");
-                MediatedSchema mediatedSchema = Extractor.GetOutputFromWeb("EUR");
+                CurrencyExtractor.Models.MediatedSchema mediatedSchema = Extractor.GetOutputFromWeb("EUR");
                 Console.WriteLine("Mediated schema object deserialized");
 
                 Console.WriteLine("Extraction successful");
-                Console.WriteLine("Starting transformation...");
-                FinalOutput finalOutput = Transformator.TransformToOutput(mediatedSchema);
-                string serialized = Serializer.SerializeFinalOutput(finalOutput);
-                Console.WriteLine("Transformation completed");
+                string serialized = Serializer.SerializeMediatedSchema(mediatedSchema);
+                File.WriteAllText("lav-output.json", serialized);
 
+                Console.WriteLine("Output serialized");
                 Console.ReadKey();
             }
             catch (Exception e)

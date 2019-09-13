@@ -44,7 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\API.cs" />
+    <Compile Include="Models\APIV4.cs" />
+    <Compile Include="Models\MediatedSchema.cs" />
+    <Compile Include="Models\Rates.cs" />
     <Compile Include="Models\RatesFinal.cs" />
+    <Compile Include="Models\RatesV4.cs" />
     <Compile Include="Serializer.cs" />
     <Compile Include="Transformator.cs" />
     <Compile Include="Models\FinalOutput.cs" />
