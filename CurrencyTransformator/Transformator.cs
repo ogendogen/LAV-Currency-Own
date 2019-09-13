@@ -10,7 +10,7 @@ namespace CurrencyTransformator
 {
     public static class Transformator
     {
-        public static FinalOutput TransformToOutput(MediatedSchema mediated)
+        public static FinalOutput TransformToOutput(CurrencyExtractor.Models.MediatedSchema mediated)
         {
             FinalOutput output = new FinalOutput();
 

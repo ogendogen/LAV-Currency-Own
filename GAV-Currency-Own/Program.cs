@@ -19,13 +19,29 @@ namespace GAV_Currency_Own
 
             try
             {
-                Console.WriteLine("Starting extraction...");
-                MediatedSchema mediatedSchema = Extractor.GetOutputFromWeb("EUR");
+                Console.WriteLine("Starting integration...");
+                MediatedSchema mediated = Extractor.GetOutputFromWeb("EUR");
                 Console.WriteLine("Mediated schema object deserialized");
 
                 Console.WriteLine("Extraction successful");
                 Console.WriteLine("Starting transformation...");
-                FinalOutput finalOutput = Transformator.TransformToOutput(mediatedSchema);
+
+                bool differentCurrency, differentDate;
+                Validator.ValidateMediatedSchemaObject(mediated, out differentCurrency, out differentDate);
+                if (differentCurrency)
+                {
+                    Console.WriteLine("Curriencies are different. Validation failed. Stopping.");
+                    Console.ReadKey();
+                    return;
+                }
+                if (differentDate)
+                {
+                    Console.WriteLine("Dates are different. Validation failed. Stopping.");
+                    Console.ReadKey();
+                    return;
+                }
+
+                FinalOutput finalOutput = Transformator.TransformToOutput(mediated);
                 string serialized = Serializer.SerializeFinalOutput(finalOutput);
                 Console.WriteLine("Transformation completed");
 

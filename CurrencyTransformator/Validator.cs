@@ -22,7 +22,17 @@ namespace CurrencyTransformator
 
             if (mediatedSchemaObject.API.date != mediatedSchemaObject.APIV4.date)
             {
-                differentDate = true;
+                DateTime APIDT = DateTime.Parse(mediatedSchemaObject.API.date);
+                DateTime APIV4DT = DateTime.Parse(mediatedSchemaObject.APIV4.date);
+
+                if (APIDT.AddDays(1.0) == APIV4DT)
+                {
+                    differentDate = false;
+                }
+                else
+                {
+                    differentDate = true;
+                }
             }
             else
             {

@@ -7,8 +7,8 @@
     <ProjectGuid>{23510CBE-CB63-41A3-8121-8FD2C74E48B0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GAV_Currency_Own</RootNamespace>
-    <AssemblyName>GAV-Currency-Own</AssemblyName>
+    <RootNamespace>LAV_Currency_Own</RootNamespace>
+    <AssemblyName>LAV-Currency-Own</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
