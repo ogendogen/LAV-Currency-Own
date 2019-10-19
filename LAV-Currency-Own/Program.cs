@@ -21,12 +21,19 @@ namespace GAV_Currency_Own
             try
             {
                 Console.WriteLine("Starting extraction...");
-                CurrencyExtractor.Models.MediatedSchema mediatedSchema = Extractor.GetOutputFromWeb("EUR");
+                //CurrencyExtractor.Models.MediatedSchema mediatedSchema = Extractor.GetOutputFromWeb("EUR");
+                List<CurrencyExtractor.Models.MediatedSchema> mediatedSchemas = Extractor.GetAllFromWeb().ToList();
                 Console.WriteLine("Mediated schema object deserialized");
 
                 Console.WriteLine("Extraction successful");
-                string serialized = Serializer.SerializeMediatedSchema(mediatedSchema);
-                File.WriteAllText("lav-output.json", serialized);
+                Console.WriteLine("Serializing");
+                int counter = 0;
+                foreach (var schema in mediatedSchemas)
+                {
+                    counter++;
+                    string serialized = Serializer.SerializeMediatedSchema(schema);
+                    File.WriteAllText("../loader/lav-output" + counter.ToString() + ".json", serialized);
+                }
 
                 Console.WriteLine("Output serialized");
                 Console.ReadKey();
